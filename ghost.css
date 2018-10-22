@@ -1,0 +1,173 @@
+#ghost {
+	top: 10em;
+	left: calc(50vw - 8em);
+	font-size: 10px;
+	background-color: white;
+	height: 20em;
+	width: 16em;
+	border-radius: 8em 8em 0 0;
+	position: absolute;
+
+	animation: float 1.5s ease-in-out infinite alternate;
+}
+
+#eyes {
+	height: 2em;
+	width: 2em;
+	top: 6em;
+	left: 4em;
+
+	background-color: black;
+	border-radius: 100%;
+	position: relative;
+	box-shadow: 6.5em 0;
+	/*animation: eyes .5s linear infinite alternate;*/
+}
+
+
+#legs {
+	width: 100%;
+	height: calc(16em/8);
+	display: flex;
+	position: relative;
+	top: 19em;
+}
+#legs > * {
+	flex: 1;
+	border-radius: 100%;
+	background-color: white;
+}
+
+
+#mouth {
+	height: 4em;
+	width: 4em;
+	border-radius: 100%;
+	box-shadow: .5em 0 black;
+	background-color: white;
+	transform: rotateZ(90deg);
+	position: relative;
+	left: 6em;
+	top: 4em;
+
+	animation: mouth 1.5s linear infinite alternate;
+}
+
+
+@keyframes eyes {
+	from {
+		height: 15px;
+		width: 15px;
+		top: 60px;
+		left: 40px;
+	}
+	to {
+		height: 25px;
+		width: 25px;
+		top: 55px;
+		left: 35px;
+	}
+}
+@keyframes mouth {
+    from {
+		box-shadow: .5em 0 black;
+	}
+    to {
+		box-shadow: 1em 0 black;
+	}
+}
+
+
+#shadow {
+	height: 2em;
+	width: 16em;
+	background-color: gray;
+	border-radius: 100%;
+	position: absolute;
+	bottom: -10em;
+	animation: antifloat 1.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes float {
+	from {
+		top: 10em;
+	}
+	to {
+		top: 13em;
+	}
+}
+@keyframes antifloat {
+	from {
+		bottom: -8em;
+		width: 12em;
+		left: 2em;
+	}
+	to {
+		bottom: -5em;
+		width: 14em;
+		left: 1em;
+	}
+}
+
+
+#hands {
+	background-color: white;
+	height: 2em;
+	width: 2em;
+	border-radius: 100%;
+	position: absolute;
+	top: 10em;
+	left: -1em;
+	box-shadow: 16em 0 white;
+	animation: wave .3s ease-in-out infinite alternate;
+}
+
+
+@keyframes wave {
+	from {
+		top: 10em;
+	}
+	to {
+		top: 11em;
+	}
+}
+
+
+#heart {
+	background-color: red;
+	width: 3em;
+	height: 3em;
+	position: absolute;
+	top: -50px;
+	left: 170px;
+	animation: heart 1.5s cubic-bezier(.47,0,.74,.71) infinite alternate;
+	transform: rotateZ(45deg);
+}
+
+#heart > * {
+	width: 3em;
+	height: 3em;
+	border-radius: 100%;
+	position: relative;
+	background-color: red;
+}
+
+#leftWing {
+	left: -1.75em;
+}
+
+#rightWing {
+	top: -4.75em;
+}
+
+@keyframes heart {
+	from {
+		top: -20px;
+		font-size: 5px;
+	}
+	to {
+		top: -40px;
+		font-size: 7px;
+	}
+}
