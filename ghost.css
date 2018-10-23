@@ -136,11 +136,12 @@
 
 #heart {
 	background-color: red;
-	width: 3em;
-	height: 3em;
+	font-size: 10px;
 	position: absolute;
 	top: -50px;
 	left: 170px;
+	width: 3em;
+	height: 3em;
 	animation: heart 1.5s cubic-bezier(.47,0,.74,.71) infinite alternate;
 	transform: rotateZ(45deg);
 }
@@ -165,9 +166,13 @@
 	from {
 		top: -20px;
 		font-size: 5px;
+		width: 15px;
+		height: 15px;
 	}
 	to {
 		top: -40px;
 		font-size: 7px;
+		width: 21px;
+		height: 21px;
 	}
 }
